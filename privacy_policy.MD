@@ -1,7 +1,7 @@
 # Comprehensive Privacy Policy for the InsurTech Operating Protocol
 
-I. Introduction, Scope, and Regulatory Mandate
-1.1. Purpose, Applicability, and Key Definitions
+# I. Introduction, Scope, and Regulatory Mandate
+## 1.1. Purpose, Applicability, and Key Definitions
 This Privacy Policy establishes the authoritative standards and procedures for the collection, processing, security, and disposal of Personal Data (PD) and Sensitive Personal Information (SPII) utilized by the InsurTech Operating Protocol (the "Protocol"). Its purpose is to ensure full regulatory adherence while preserving the core tenets of decentralized ledger technology (DLT). This policy applies universally to the Protocol Foundation (the managing entity), all software developers and contributors, network participants (nodes, miners), policyholders (data subjects), and off-chain service providers or partners.   
 
 To ensure clarity and transparency, especially regarding the complex architecture of a DLT system, key definitions are provided in plain language, consistent with the requirements of major global privacy frameworks.   
@@ -16,9 +16,9 @@ On-Chain Data: Immutable data permanently recorded on the Protocol’s distribut
 
 Off-Chain Data (PII Repository): Personal Data and Sensitive Personal Information stored separately from the DLT in secure, centralized, and controlled databases, necessary for regulatory compliance and contract fulfillment.
 
-Logical Deletion: The specific Technical and Organisational Measure (TOM) employed to satisfy the Right to Erasure, involving the permanent physical deletion of off-chain PII coupled with the irreversible destruction of all cryptographic keys linking the deleted PII to its corresponding on-chain hash.
+Logical Deletion: The specific Technical and Organizational Measure (TOM) employed to satisfy the Right to Erasure, involving the permanent physical deletion of off-chain PII coupled with the irreversible destruction of all cryptographic keys linking the deleted PII to its corresponding on-chain hash.
 
-1.2. Governing Frameworks and Compliance Mandate
+## 1.2. Governing Frameworks and Compliance Mandate
 The Protocol operates under a comprehensive, maximalist compliance strategy, adhering to the strictest applicable global privacy regulations. The European Union’s General Data Protection Regulation (GDPR) serves as the baseline standard for processing activities worldwide, given its extraterritorial reach and severe penalties for non-compliance. This strategy minimizes regulatory fragmentation and manages the high legal risk associated with global DLT operations.   
 
 Mandated compliance extends beyond GDPR to include:
@@ -31,23 +31,23 @@ Specific InsurTech sector regulations, including standards set forth by the Nati
 
 The Policy affirms absolute commitment to the seven fundamental principles of data processing required under GDPR Article 5: Lawfulness, Fairness, Transparency, Purpose Limitation, Data Minimisation, Accuracy, Storage Limitation, and Integrity/Confidentiality.   
 
-1.3. Principle of Privacy-by-Design and Default
+## 1.3. Principle of Privacy-by-Design and Default
 The Protocol is engineered to incorporate privacy and data protection measures from the initial stages of system development, upholding the legal mandate of Privacy-by-Design and Default (PbD). This means the default settings for all Protocol services are configured to offer the maximum level of privacy to the Data Subject.   
 
 For a DLT operation, PbD is manifested through key architectural commitments: the implementation of a necessary Hybrid Storage Model (Section IV), which separates mutable PII from the immutable DLT, and the pervasive use of Zero-Knowledge Proofs (ZKP) (Section V) to enable verifiability without compromising data confidentiality. These measures proactively address the fundamental tensions between decentralized operations and regulatory mandates.   
 
-II. Roles, Accountability, and Governance in the Protocol
-2.1. Defining the Data Controller: The Protocol Foundation
+# II. Roles, Accountability, and Governance in the Protocol
+## 2.1. Defining the Data Controller: The Protocol Foundation
 The identification of a Data Controller is a critical challenge in decentralized networks, where traditional central authority is absent, leading to legal ambiguity. However, because the InsurTech Operating Protocol must adhere to highly regulated financial and insurance mandates—specifically Anti-Money Laundering (AML), Know-Your-Customer (KYC), and fiduciary requirements—a single legal entity must assume accountability.   
 
 Consequently, the Protocol Foundation is formally designated as the primary Data Controller for all processing of PII, especially concerning off-chain repositories necessary for legal and regulatory adherence. The Foundation determines the explicit purposes and the technical means of processing PII, including establishing data retention periods. This designation provides the essential centralized legal accountability required for compliance, offering a clear point of legal recourse for data subjects and regulatory bodies.   
 
-2.2. Defining Data Processors and Sub-Processors
+## 2.2. Defining Data Processors and Sub-Processors
 Any individual or entity that handles or operates on PII under the strict, explicit instruction of the Protocol Foundation acts as a Data Processor. This includes, but is not limited to, specific licensed insurance partners, third-party KYC/AML verification services, and, in a technical sense, the network nodes themselves when they process data references or transaction metadata based on the Controller’s coded instructions.   
 
 Processors are mandated to implement appropriate Technical and Organisational Measures (TOMs) and are bound by the instructions stipulated by the Controller. The relationship between the Foundation and any Processor must be formalized through a legally binding Data Processing Agreement (DPA), which meticulously documents the processing operations and security requirements.   
 
-2.3. Determining Joint Controllership
+## 2.3. Determining Joint Controllership
 Joint controllership arises in situations where the Protocol Foundation and an external regulated entity (e.g., a collaborating insurance carrier) jointly define the purpose and means for processing the same PII. This typically occurs during activities requiring shared data pools, such as co-underwriting or mutual fraud detection mechanisms.   
 
 In cases of joint control, a formal Joint Controller Agreement must be established. This document explicitly delineates the specific responsibilities of each controller, including who manages data subject rights requests (like SARs or erasure requests), who is responsible for data breach notification, and who maintains specific security protocols for the shared data. This measure ensures compliance clarity even when data processing relies on complex, distributed collaborations.   

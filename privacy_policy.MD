@@ -52,7 +52,7 @@ Joint controllership arises in situations where the Protocol Foundation and an e
 
 In cases of joint control, a formal Joint Controller Agreement must be established. This document explicitly delineates the specific responsibilities of each controller, including who manages data subject rights requests (like SARs or erasure requests), who is responsible for data breach notification, and who maintains specific security protocols for the shared data. This measure ensures compliance clarity even when data processing relies on complex, distributed collaborations.   
 
-2.4. Accountability Measures and Documentation
+## 2.4. Accountability Measures and Documentation
 The Protocol Foundation is responsible for demonstrating compliance with every principle of data protection law. This includes maintaining comprehensive records of processing activities, regularly conducting Data Protection Impact Assessments (DPIAs)—especially on novel DLT implementations—and verifying the compliance status of all contracted third-party processors.   
 
 The table below illustrates the definitive assignment of roles based on the necessity of the processing activity:
@@ -76,15 +76,15 @@ Network Nodes (Processors/Technical Functionaries)
 Processing under Controller instruction (Protocol automation) 
 
   
-III. Data Collection, Minimization, and Lawful Basis
-3.1. Categories of Personal Data Processed
+# III. Data Collection, Minimization, and Lawful Basis
+## 3.1. Categories of Personal Data Processed
 Data processed by the Protocol is strictly categorized based on its sensitivity and architecture:
 
 Off-Chain PII/SPII: This includes basic identifying information (name, contact details), financial PII (bank account data, credit or debit card data), creditworthiness scores, KYC verification documents, and potentially health data related to risk assessment (which qualifies as SPII). Due to the inherent risk of identity theft or fraud associated with this information, it is subject to the strictest security controls.   
 
 On-Chain Data: This category is limited to non-identifying cryptographic data, specifically pseudonymous cryptographic addresses and irreversible transaction hashes that serve only as metadata references to off-chain records.   
 
-3.2. Lawful Bases for Processing InsurTech PII
+## 3.2. Lawful Bases for Processing InsurTech PII
 Every processing activity carried out by the Protocol Foundation must be supported by a lawful basis as defined by GDPR. For a regulated financial technology project, reliance primarily falls upon:
 
 Legal Obligation: This forms the bedrock for critical functions such as mandated KYC/AML procedures, necessary regulatory reporting, and fraud prevention protocols. The nature of the financial services sector necessitates a reliance on legal mandates , as the stability and compliance of core network functions cannot be subject to the operational risk introduced by relying solely on consent (which can be withdrawn).   
@@ -95,32 +95,32 @@ Legitimate Interests: Processing for core operational support, such as ensuring 
 
 Explicit Consent: Used restrictively for optional processing activities or for certain categories of highly sensitive data that fall outside legal or contractual necessity (e.g., marketing or optional research).
 
-3.3. Handling Sensitive Personal Information (SPII)
+## 3.3. Handling Sensitive Personal Information (SPII)
 The InsurTech sector inherently processes SPII, including financial data and, in certain circumstances, personal health information related to risk (e.g., life insurance underwriting). The Foundation commits to processing SPII under heightened restrictions:   
 
 Safeguards: SPII is subject to strict purpose limitation, meaning it is only used for the specified, legitimate purpose for which it was collected. Access is rigorously restricted, limited only to staff who have followed specialized training. The Foundation maintains a detailed, mandatory record of all access to SPII.   
 
 Prohibition on DLT Storage: Sensitive Personal Information is strictly prohibited from being stored directly on the DLT.
 
-3.4. Data Minimization Strategy
+## 3.4. Data Minimization Strategy
 In alignment with the principle of Data Minimization, the Protocol only collects PII that is adequate, relevant, and strictly limited to what is necessary to achieve the stated purposes. Any collection that goes beyond minimum necessity must be supported by explicit and voluntary consent.   
 
 To enforce this, the Protocol incorporates technical mechanisms such as tokenization and ZKPs, which allow necessary verification and processing to occur without requiring the underlying, full PII to be exposed or transferred. This reduction in the volume of PII collected and retained is vital for minimizing both security exposure and the administrative burden of responding to subject access and erasure requests.   
 
-IV. Data Flows: On-Chain, Off-Chain, and Hybrid Architecture
-4.1. The Necessity of the Hybrid Storage Model
+# IV. Data Flows: On-Chain, Off-Chain, and Hybrid Architecture
+## 4.1. The Necessity of the Hybrid Storage Model
 The core solution for reconciling DLT immutability with regulatory requirements for data mutability and control is the mandatory Hybrid Storage Architecture. This model ensures that personal data is never immutably embedded in the ledger, adhering to the principle of Privacy-by-Design.   
 
 Off-Chain Repository: This serves as the sole authorized, secure repository for mutable PII/SPII. It is stored on secure servers with robust security protocols, access controls, and encryption. The Foundation, acting as Controller, maintains centralized oversight of this repository.   
 
 On-Chain DLT: The DLT ledger is strictly limited to storing irreversible cryptographic hashes and pseudonymous metadata references. These hashes are designed to be non-reconstructable back into the original PII. The design is engineered such that the cryptographic linkage must be incapable of revealing the PII, even if the off-chain data were later compromised.   
 
-4.2. Pseudonymity and On-Chain Identifiers
+## 4.2. Pseudonymity and On-Chain Identifiers
 Participants engaging in transactions are identified on the DLT network only by pseudonymous cryptographic addresses. This allows for public verifiability of transactions, a core feature of decentralized networks, while concealing the real-world identity of the user.   
 
 It is essential to recognize that the Protocol operates pseudonymously, not anonymously. Pseudonymity implies that while the digital address (the alias) is visible, the real-world identity remains concealed unless external information can be utilized to penetrate the veil. In the Protocol’s hybrid environment, the sensitive linking mechanisms and keys needed to associate the pseudonymous address with the Off-Chain PII are held centrally by the Foundation and guarded under stringent security protocols.   
 
-4.3. Mechanisms for De-Identification, Tokenization, and Encryption
+## 4.3. Mechanisms for De-Identification, Tokenization, and Encryption
 The Protocol relies on advanced Technical and Organisational Measures (TOMs) to protect off-chain data:
 
 Tokenization: PII is replaced with non-sensitive substitute identifiers (tokens) for transaction processing and internal operations, significantly reducing the exposure surface.   
@@ -129,8 +129,8 @@ Encryption: All sensitive data, both at rest in the off-chain repository and in 
 
 Irreversible Hashes: The cryptographic hashes recorded on the DLT must be constructed using secure hashing algorithms and salting keys. These keys are managed separately, guaranteeing that if the off-chain PII is deleted, the on-chain hash cannot be reverse-engineered or used to reconstruct or verify identity, even in combination with other data. This compliance mechanism ensures the integrity of the ledger while adhering to data privacy standards.   
 
-V. Technical Compliance and Privacy-Enhancing Measures (TOMs)
-5.1. Resolving DLT Immutability: The Right to Erasure (Article 17)
+# V. Technical Compliance and Privacy-Enhancing Measures (TOMs)
+## 5.1. Resolving DLT Immutability: The Right to Erasure (Article 17)
 Blockchain’s core feature of immutability creates a fundamental conflict with the GDPR’s Right to Erasure (Article 17), which mandates the deletion of personal data upon request. Since physical removal of data from a distributed ledger is impossible, the Protocol utilizes a rigorous technical definition of erasure: Logical Deletion.   
 
 Logical Deletion is executed through the following procedure upon receipt of a valid erasure request:
@@ -141,18 +141,18 @@ The cryptographic keys, salt, and linking mechanisms necessary to associate the 
 
 The result is that the on-chain data, though technically still present, is rendered cryptographically unidentifiable and functionally useless for linking back to the individual. By revoking all access rights and destroying the crucial linkage mechanism, the Foundation ensures that the data is treated as effectively "erased" and no longer qualifies as Personal Data.   
 
-5.2. Implementing Zero-Knowledge Proofs (ZKP)
+## 5.2. Implementing Zero-Knowledge Proofs (ZKP)
 The Protocol incorporates Zero-Knowledge Proofs (ZKP) to achieve verifiable, confidential computation. ZKPs enable a party (the prover) to prove that a specific statement about data is true without revealing any information about the underlying data itself.   
 
 Application: ZKPs are essential for sensitive InsurTech operations, allowing parties to verify policy terms, credit scores, claims eligibility, or specific DAO governance votes without revealing confidential data.   
 
 Regulatory Balancing Act: The advanced privacy afforded by ZKPs must be proactively balanced against global obligations to mitigate illicit financial risk (AML/CTF). To prevent the Protocol from becoming an unregulated vehicle for money laundering, the Foundation implements a specific de-anonymization safeguard: A multi-key escrow mechanism is established, requiring a private key held by a neutral, trusted gatekeeper organization and a separate key held by designated government authorities. Both keys must be used together to de-anonymize transactions under strict legal requirements, such as a court order or warrant. This solution maintains user privacy by default while providing a necessary avenue for lawful oversight.   
 
-5.3. Smart Contracts with Expiration Clauses
+## 5.3. Smart Contracts with Expiration Clauses
 To automatically enforce the principle of Storage Limitation (data must not be kept longer than necessary) , the Protocol utilizes Smart Contracts with Expiration Clauses in its hybrid environment. These automated clauses are coded to correspond precisely with the mandatory InsurTech regulatory retention periods (Section IX). Upon expiration, the smart contract automatically triggers the formal logical deletion process, initiating the revocation of access rights and the deletion of the linking keys for the associated off-chain PII.   
 
-VI. Data Security, Integrity, and Confidentiality
-6.1. Technical and Organizational Measures (TOMs)
+# VI. Data Security, Integrity, and Confidentiality
+## 6.1. Technical and Organizational Measures (TOMs)
 The Foundation commits to deploying industry-leading Technical and Organizational Measures (TOMs) designed to ensure a security level appropriate to the high risk involved in processing SPII. These measures encompass:   
 
 Access Control: Strict controls ensuring PII access is limited to the absolute minimum extent necessary, subject to confidentiality restrictions, and verified through identity checks prior to granting access.   
@@ -161,23 +161,23 @@ Storage and Transmission Security: Use of secure, hardened servers for off-chain
 
 Process Security: Training employees on GDPR and security protocols, and enforcing formal data governance policies.   
 
-6.2. Network and Information Security
+## 6.2. Network and Information Security
 The Protocol recognizes network and information security as a legitimate interest justifying the limited processing of non-PII operational data. Server log files are maintained to record access and provide an audit trail for security analysis.   
 
 Given the open-source nature of the project, which increases transparency, the Foundation places a high priority on coordinated vulnerability disclosure (CVD) and rapid patching mechanisms to address potential security weaknesses that may be inadvertently exposed. Users are also reminded of their own obligation to protect personal security, including choosing robust passwords and guarding log-in credentials.   
 
-6.3. Incident Response and Data Breach Notification Procedures
+## 6.3. Incident Response and Data Breach Notification Procedures
 The Foundation maintains comprehensive incident response and data breach notification procedures. As the Data Controller, the Foundation assumes responsibility for notifying supervisory authorities and affected Data Subjects without undue delay in the event of a breach of PII or the compromise of linking cryptographic keys. Notification requirements are particularly stringent when sensitive categories of data, such as financial account numbers or government identifiers, are implicated.   
 
-VII. Open-Source Contributor and Telemetry Policy
-7.1. Collection and Use of Contributor PII
+# VII. Open-Source Contributor and Telemetry Policy
+## 7.1. Collection and Use of Contributor PII
 To facilitate collaboration, code attribution, and compliance with open licenses (which may require source code availability and distribution rights) , the Protocol processes PII from its contributors, typically managed through platforms like GitHub.   
 
 PII Collected: Identification and contact information, including name, email address, location, and GitHub profile details.   
 
 Purpose: This data is collected strictly for code attribution, communication, security management, and regulatory compliance associated with software licensing.   
 
-7.2. Telemetry Data Collection and Principles
+## 7.2. Telemetry Data Collection and Principles
 If the Protocol software implements the collection of usage or performance data (Telemetry Data), it adheres to stringent transparency and minimization rules, ensuring that the open-source ethos of sharing documentation is balanced with the need for individual privacy.   
 
 The collection of Telemetry Data must comply with three core principles:
@@ -190,11 +190,11 @@ Security: The data collection mechanism must not introduce any inadvertent secur
 
 Any collected Telemetry Data must be fully documented in the public documentation and, if shared with the project community, must be thoroughly anonymized or aggregated beforehand.   
 
-7.3. PII Detection and Mitigation in Public Repositories
+## 7.3. PII Detection and Mitigation in Public Repositories
 The open nature of collaborative development poses a risk of accidental exposure of PII in public forums (e.g., in commit messages, issues, or pull requests). The Protocol utilizes automated mitigation tools, such as GitHub actions, designed to detect and flag common PII elements (e.g., phone numbers, SSNs, IP addresses) submitted to the public repository. Strict operational procedures are maintained for the prompt review, redaction, and removal of any PII inadvertently disclosed in public communications.   
 
-VIII. Data Subject Rights and Exercise Procedures
-8.1. Summary of Data Subject Rights
+# VIII. Data Subject Rights and Exercise Procedures
+## 8.1. Summary of Data Subject Rights
 The Protocol guarantees global Data Subjects comprehensive rights over their PII:
 
 Right of Access: The right to obtain confirmation that PII is being processed and to receive a copy of that PII.   
@@ -211,21 +211,21 @@ Right to Object: The right to object to processing based on the Foundation’s l
 
 Right to Withdraw Consent: The right to withdraw consent for processing based on that lawful basis at any time.   
 
-8.2. Procedure for Submitting and Responding to Requests
+## 8.2. Procedure for Submitting and Responding to Requests
 All requests must be submitted through the Protocol’s designated, secure privacy portal. The Foundation requires rigorous verification of the individual’s identity prior to processing any request for access, portability, or deletion to prevent unauthorized disclosure.   
 
 The response to erasure requests must comply with strict transparency rules. The Foundation will use clear, unambiguous language to explain the DLT hybrid model, confirming the secure deletion of the off-chain PII and explaining that the corresponding on-chain hash has been rendered non-identifiable through the destruction of linkage keys (Logical Deletion).   
 
-8.3. Right to Complaint
+## 8.3. Right to Complaint
 Data Subjects retain the right to lodge a formal complaint regarding the Foundation's data processing practices with a relevant supervisory authority. For US Data Subjects, this explicitly includes the right to appeal the denial of a privacy request to the state’s Attorney General.   
 
-IX. Data Retention Schedule (InsurTech Compliance and Storage Limitation)
-9.1. Principle of Storage Limitation and Review
+# IX. Data Retention Schedule (InsurTech Compliance and Storage Limitation)
+## 9.1. Principle of Storage Limitation and Review
 The Storage Limitation principle mandates that PII may be retained only for as long as necessary for the specified processing purpose. Retention beyond this period is only permissible if justified by a clear legal obligation or, under specific circumstances, for archiving in the public interest.   
 
 The Foundation maintains formal retention schedules and is obligated to review all retained PII regularly to ensure that the lawful basis for retention remains valid. If the basis expires, the deletion process must be immediately initiated.   
 
-9.2. Specific InsurTech Regulatory Retention Requirements
+## 9.2. Specific InsurTech Regulatory Retention Requirements
 The Protocol’s obligation to comply with global insurance and financial regulatory mandates dictates specific long-term retention requirements that constitute a Legal Obligation. These requirements supersede standard data minimization timelines for essential financial and contractual records. Insurers are required by state and international model laws (e.g., NAIC standards) to maintain books and records necessary for auditing regulatory compliance over extended periods.   
 
 These retention mandates typically require data to be held for six to ten years for purposes such as auditability, fraud investigation, and legal defense of long-tail claims. The explicit reliance on the legal obligation grounds the retention policy in regulatory necessity.   
@@ -260,21 +260,21 @@ PII linkage keys are destroyed upon expiration of related off-chain PII, renderi
   
 The perpetual existence of the transaction hash on the DLT is deemed compliant only because the PII linkage keys are deliberately and irrevocably destroyed upon the expiry of the associated off-chain PII. This action ensures that the on-chain record ceases to be legally defined as personal data.
 
-X. International Data Transfers and Regulatory Jurisdiction
-10.1. Cross-Border Transfers
+# X. International Data Transfers and Regulatory Jurisdiction
+## 10.1. Cross-Border Transfers
 Due to the distributed and global nature of the Protocol, PII may be transferred internationally. Transfers of PII outside of jurisdictions deemed to provide adequate protection (e.g., the EEA) must be safeguarded by legally sanctioned mechanisms. The Foundation requires the implementation of legally approved instruments such as Standard Contractual Clauses (SCCs) or Binding Corporate Rules (BCRs) to guarantee that the data maintains continuous, high-level protection regardless of geographic location. The Foundation is responsible for ensuring that all data processors handling international transfers adhere to these safeguards.   
 
-10.2. Jurisdiction and Supervisory Authority Designation
+## 10.2. Jurisdiction and Supervisory Authority Designation
 The Protocol Foundation designates its legal establishment and relevant supervisory authority, providing Data Subjects and international regulatory bodies with a clear point of jurisdictional contact for all data protection matters.
 
-XI. Openness and Review
-11.1. Policy Accessibility and Plain Language
+# XI. Openness and Review
+## 11.1. Policy Accessibility and Plain Language
 This Policy is immediately available on a public, easily accessible interface to ensure maximum transparency. The language used is designed to be clear and comprehensible to the average Data Subject, fulfilling the GDPR requirement for policies not to hide important information behind dense jargon.   
 
-11.2. Policy Revisions
+## 11.2. Policy Revisions
 The Protocol Foundation retains the right to amend this Policy as necessary to adapt to technological evolution or changes in regulatory jurisprudence. Material changes will be communicated directly to Data Subjects and published prominently on the Protocol's public documentation interface.
 
-XII. Conclusion and Regulatory Compliance Blueprint
+# XII. Conclusion and Regulatory Compliance Blueprint
 The InsurTech Operating Protocol’s privacy policy successfully navigates the complex regulatory environment unique to decentralized financial technology. The central commitment is to operate transparently within the boundaries defined by global data protection law, using technical controls to resolve fundamental conflicts inherent to DLT.
 
 The core of this blueprint lies in the mandatory implementation of the Hybrid Storage Model and Logical Deletion. This strategy systematically addresses the Right to Erasure by defining "erasure" as the calculated, irreversible destruction of the cryptographic link between the immutable on-chain record and the mutable off-chain PII.   

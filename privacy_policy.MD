@@ -59,21 +59,12 @@ The table below illustrates the definitive assignment of roles based on the nece
 
 Table 1: Assignment of Data Controller and Processor Responsibilities in the Protocol
 
-Data Processing Activity	PII Type	Assigned Role (Controller/Processor)	Legal Basis / Justification
-KYC/AML Verification (Off-Chain)	Identity Documents, Biometrics	Protocol Foundation (Controller)	
-Legal Obligation (AML/InsurTech Mandates) 
-
-Storing Off-Chain InsurTech PII	Underwriting/Claims Data (SPII)	Protocol Foundation (Controller)	
-Contractual Necessity (Fulfilling policy obligations) 
-
-Network Telemetry/Usage Data	IP Address, Usage Patterns	Protocol Foundation (Controller)	
-Legitimate Interest (Network & Information Security) 
-
-Storing Encrypted Transaction Hashes (On-Chain)	
-Pseudonymous Identifiers 
-
-Network Nodes (Processors/Technical Functionaries)	
-Processing under Controller instruction (Protocol automation) 
+| Data Processing Activity	| PII Type | Assigned Role (Controller/Processor) | Legal Basis / Justification |
+| ------------------------- | -------- | ------------------------------------ | --------------------------- |
+| KYC/AML Verification (Off-Chain) | Identity Documents, Biometrics | Protocol Foundation (Controller)	| Legal Obligation (AML/InsurTech Mandates) |
+| Storing Off-Chain InsurTech PII |	Underwriting/Claims Data (SPII) |	Protocol Foundation (Controller)	| Contractual Necessity (Fulfilling policy obligations) |
+| Network Telemetry/Usage Data | IP Address, Usage Patterns | Protocol Foundation (Controller)	| Legitimate Interest (Network & Information Security) |
+| Storing Encrypted Transaction Hashes (On-Chain) | Pseudonymous Identifiers | Network Nodes (Processors/Technical Functionaries)	| Processing under Controller instruction (Protocol automation) |
 
   
 # III. Data Collection, Minimization, and Lawful Basis

@@ -223,30 +223,12 @@ These retention mandates typically require data to be held for six to ten years 
 
 Table 3: InsurTech Protocol Data Retention Schedule
 
-Category of Personal Data	Purpose of Processing	Lawful Basis	Minimum Regulatory Retention Period	Policy Action at Expiry
-KYC/AML Identity Documents (Off-Chain)	Financial Crime Prevention & Regulatory Compliance	
-Legal Obligation 
-
-6 to 10 years (post-policy or post-relationship termination) 
-
-Secure, irreversible deletion of off-chain documents/data.
-Insurance Contract PII (Underwriting Data, Claims History) (Off-Chain)	Contractual Necessity & Claims Defense	
-Legal Obligation / Contractual Necessity 
-
-6 years (post-policy expiry or final claim settlement) 
-
-Automated deletion, except when subject to a judicial legal hold.
-
-Protocol Telemetry/Usage Logs (Anonymized PII)	Network Security and Optimization	
-Legitimate Interest 
-
-2 years (max retention for low-value operational data) 
-
-Anonymization, aggregation, or deletion.
-On-Chain Transaction Hashes/Metadata (Pseudonymous)	Immutable Audit Trail & DLT Integrity	Necessary for Protocol Function	
-Perpetual (Immutable by design) 
-
-PII linkage keys are destroyed upon expiration of related off-chain PII, rendering the hash anonymous/pseudonymous.
+| Category of Personal Data |	Purpose of Processing | Lawful Basis | Minimum Regulatory Retention Period | Policy Action at Expiry |
+| ------------------------- | --------------------- | ------------ | ----------------------------------- | ----------------------- |
+|KYC/AML Identity Documents (Off-Chain) | Financial Crime Prevention & Regulatory Compliance | Legal Obligation | 6 to 10 years (post-policy or post-relationship termination) | Secure, irreversible deletion of off-chain documents/data. |
+| Insurance Contract PII (Underwriting Data, Claims History) (Off-Chain) | Contractual Necessity & Claims Defense	| Legal Obligation / Contractual Necessity | 6 years (post-policy expiry or final claim settlement) | Automated deletion, except when subject to a judicial legal hold. |
+| Protocol Telemetry/Usage Logs (Anonymized PII) | Network Security and Optimization | Legitimate Interest | 2 years (max retention for low-value operational data) | Anonymization, aggregation, or deletion. |
+| On-Chain Transaction Hashes/Metadata (Pseudonymous) | Immutable Audit Trail & DLT Integrity | Necessary for Protocol Function	| Perpetual (Immutable by design) | PII linkage keys are destroyed upon expiration of related off-chain PII, rendering the hash anonymous/pseudonymous. |
 
   
 The perpetual existence of the transaction hash on the DLT is deemed compliant only because the PII linkage keys are deliberately and irrevocably destroyed upon the expiry of the associated off-chain PII. This action ensures that the on-chain record ceases to be legally defined as personal data.

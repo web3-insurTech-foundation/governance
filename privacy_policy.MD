@@ -1,4 +1,4 @@
-# Comprehensive Privacy Policy for the InsurTech Operating Protocol
+# Comprehensive Privacy Policy for the InsurTech Operating Protocol.
 
 # I. Introduction, Scope, and Regulatory Mandate
 ## 1.1. Purpose, Applicability, and Key Definitions
